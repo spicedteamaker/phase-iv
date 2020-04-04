@@ -1,0 +1,19 @@
+current directory: /home/teabrewer/rails_tests/phase-v/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+/usr/bin/ruby2.5 -r ./siteconf20200403-2976-8rulrj.rb extconf.rb
+creating Makefile
+
+current directory: /home/teabrewer/rails_tests/phase-v/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/teabrewer/rails_tests/phase-v/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/teabrewer/rails_tests/phase-v/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20200403-2976-1k25cc6/byebug
