@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  resources :rentals
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+
   # Ensure you have defined root_url to *something* in your config/routes.rb.
   resources :films
   get 'films/show'
