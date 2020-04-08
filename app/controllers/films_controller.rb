@@ -10,6 +10,7 @@ class FilmsController < ApplicationController
   # GET /films/1
   # GET /films/1.json
   def show
+    @rentedStatusText = rented_status_text(@film)
   end
 
   # GET /films/new
@@ -70,5 +71,17 @@ class FilmsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def film_params
       params.require(:film).permit(:title, :synopsis)
+    end
+
+    def rented_status_text(film)
+      if is_rentable?(film)
+        "Film is available for rent"
+      else
+        "Film is currently not available for rent"
+      end
+    end
+
+    def is_rentable?(film)
+      film.rentable
     end
 end

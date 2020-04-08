@@ -31,6 +31,9 @@ class RentalsController < ApplicationController
 
     respond_to do |format|
       if @rental.save
+        f = Film.find(@rental.film_id)
+        f.rentable = false
+        f.save!
         format.html { redirect_to @rental, notice: 'Rental was successfully created.' }
         format.json { render :show, status: :created, location: @rental }
       else

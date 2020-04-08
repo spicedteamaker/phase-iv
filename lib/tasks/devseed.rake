@@ -21,7 +21,8 @@ namespace 'db' do
       150.times do
         Film.create!(
           title: Faker::Book.title,
-          synopsis: Faker::Lorem.paragraph(sentence_count: rand(5..15))
+          synopsis: Faker::Lorem.paragraph(sentence_count: rand(5..15)),
+          rentable: true
         )
       end
       puts "=-=-=-=-=-=-=-=-=-="
