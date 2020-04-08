@@ -10,10 +10,13 @@ class RentalsController < ApplicationController
   # GET /rentals/1
   # GET /rentals/1.json
   def show
+    @film_title = Film.find(@rental.film_id).title
+    @rentee_email = User.find(@rental.user_id).email
   end
 
   # GET /rentals/new
   def new
+    @film_id = params[:film_id]
     @rental = Rental.new
   end
 
