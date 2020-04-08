@@ -17,6 +17,7 @@ class RentalsController < ApplicationController
   # GET /rentals/new
   def new
     @film_id = params[:film_id]
+    @filmTitle = Film.find(@film_id).title
     @rental = Rental.new
   end
 
