@@ -7,6 +7,9 @@
     <% else %>
       <%= link_to "sign in", new_user_session_path %>
     <% end %>
+    <%= link_to "films", films_path %>
+    <%= link_to "rentals", rentals_path %>
+    <%= link_to "users", users_path %>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
