@@ -1,0 +1,7 @@
+<%= @user.email %>
+
+<h1> Current rentals </h1>
+<% @rentals.each do |rental| %>
+  <%= rental.film_id %>
+  <br>
+<% end %>
