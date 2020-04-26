@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to user.email, user %></td>
         <td><% user.rentals.each do |rental| %>
-          <%= rental.film_id %>
+          <%= link_to Film.find_by(id: rental.film_id).title, film_path(rental.film_id) %>
           <%= ',' %>
         <% end %>
         </td>

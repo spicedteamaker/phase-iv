@@ -15,7 +15,7 @@
   <tbody>
     <% @rentals.each do |rental| %>
       <tr>
-        <td><%= Film.find_by(id: rental.film_id).title %></td>
+        <td><%= link_to Film.find_by(id: rental.film_id).title, film_path(rental.film_id) %></td>
         <td><%= rental.created_at %></td>
         <td><%= rental.due_date %></td>
       </tr>
